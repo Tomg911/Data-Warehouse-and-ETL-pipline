@@ -36,6 +36,25 @@ Develop SQL-based analytics to deliver insights into:
 * Product performance
 * Sales trends
 
-  
+  ## 🏗️ Data Architecture (Medallion Model)
+
+This project follows the Medallion Architecture with three layers:
+
+### 🟤 Bronze Layer (Raw Data)
+- Stores raw, unprocessed data from source systems (CRM, ERP)
+- Data is ingested using BULK INSERT
+- No transformation is applied
+- Purpose: Traceability and debugging
+
+### ⚪ Silver Layer (Clean Data)
+- Data is cleaned and standardized
+- Removes duplicates and fixes inconsistencies
+- Structured for further processing
+
+### 🟡 Gold Layer (Business Layer)
+- Contains business-ready data
+- Data is aggregated and modeled
+- Supports analytics and reporting
+- Uses schemas like Star Schema
 
 ---
